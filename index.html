@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fönster Rent | Professionell Fönsterputs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Fönster Rent</h1>
+    <p>Skinande rena fönster för hem, lägenheter och företag. Snabb service, fasta priser och nöjda kunder.</p>
+    <a href="#bokning" class="btn">Boka Tid</a>
+</header>
+
+<section class="container">
+    <h2>Våra Paket</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Bas</h3>
+            <div class="price">299 kr</div>
+            <ul>
+                <li>✓ Utvändig fönsterputs</li>
+                <li>✓ Upp till 10 fönster</li>
+                <li>✓ Perfekt för mindre bostäder</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Standard</h3>
+            <div class="price">599 kr</div>
+            <ul>
+                <li>✓ Invändig & utvändig puts</li>
+                <li>✓ Upp till 20 fönster</li>
+                <li>✓ Mest populära valet</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Premium</h3>
+            <div class="price">999 kr</div>
+            <ul>
+                <li>✓ Komplett rengöring</li>
+                <li>✓ Karmar och detaljer</li>
+                <li>✓ Upp till 40 fönster</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="container">
+    <div class="about">
+        <h2>Om Fönster Rent</h2>
+        <p>
+            Vi hjälper privatpersoner och företag att få kristallklara fönster året runt.
+            Med noggrant arbete, punktlighet och hög service ser vi till att varje kund blir nöjd.
+        </p>
+    </div>
+</section>
+
+<section class="container">
+    <h2>Kundrecensioner</h2>
+
+    <div class="reviews">
+
+        <div class="review">
+            ⭐⭐⭐⭐⭐
+            <p>"Fantastiskt resultat! Fönstren blev som nya."</p>
+            <strong>- Anna</strong>
+        </div>
+
+        <div class="review">
+            ⭐⭐⭐⭐⭐
+            <p>"Snabb service och mycket trevligt bemötande."</p>
+            <strong>- Johan</strong>
+        </div>
+
+        <div class="review">
+            ⭐⭐⭐⭐⭐
+            <p>"Kommer definitivt anlita igen."</p>
+            <strong>- Sara</strong>
+        </div>
+
+    </div>
+</section>
+
+<section class="container" id="bokning">
+    <div class="booking">
+        <h2>Boka Tid</h2>
+
+        <form id="bookingForm">
+
+            <label>Namn</label>
+            <input type="text" id="namn" name="namn" required>
+
+            <label>E-post</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Telefon</label>
+            <input type="tel" id="telefon" name="telefon">
+
+            <label>Välj Paket</label>
+            <select id="paket" name="paket">
+                <option>Bas</option>
+                <option>Standard</option>
+                <option>Premium</option>
+            </select>
+
+            <label>Önskat Datum</label>
+            <input type="date" id="datum" name="datum">
+
+            <label>Meddelande</label>
+            <textarea id="meddelande" name="meddelande" rows="5"></textarea>
+
+            <button type="submit">Skicka Bokning</button>
+
+        </form>
+        <div id="successMessage" style="display:none; color:green; margin-top:20px; font-weight:bold;">
+            ✓ Tack för din bokning! Vi kontaktar dig snart.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Fönster Rent</p>
+    <p>E-post: axel.walhjalt@icloud.com</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
