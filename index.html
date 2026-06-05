@@ -49,6 +49,17 @@
             </ul>
         </div>
 
+        <div class="card custom-card">
+            <h3>Anpassad Paket</h3>
+            <div class="price">Egen pris</div>
+            <ul>
+                <li>✓ Flexibel lösning</li>
+                <li>✓ Från 20 fönster</li>
+                <li>✓ Från 299 kr</li>
+            </ul>
+            <button class="custom-btn" onclick="document.getElementById('customPacketForm').scrollIntoView({behavior: 'smooth'})">Beräkna Pris</button>
+        </div>
+
     </div>
 </section>
 
@@ -124,6 +135,67 @@
     </div>
 </section>
 
+<section class="container" id="customPacketForm">
+    <div class="custom-packet-section">
+        <h2>Anpassad Paket Kalkylator</h2>
+        <p class="info-text">Skapa ditt eget paket baserat på antal fönster. Minst 20 fönster och 299 kr.</p>
+        
+        <form id="customPacketFormElement">
+            <label>Antal Fönster</label>
+            <div class="input-group">
+                <input type="number" id="windowCount" name="windowCount" min="20" value="20" required>
+                <span class="info-label">Minst 20 fönster</span>
+            </div>
+
+            <label>Tjänster</label>
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="services" value="Utvändig puts" checked> Utvändig puts (gratis)
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="services" value="Invändig puts"> Invändig puts (+150 kr)
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="services" value="Karmar och detaljer"> Karmar och detaljer (+200 kr)
+                </label>
+            </div>
+
+            <div class="price-display">
+                <p>Beräknad Pris:</p>
+                <div class="calculated-price">
+                    <span id="calculatedPrice">299</span> kr
+                </div>
+            </div>
+
+            <div class="price-breakdown" id="priceBreakdown">
+                <p>Prisuppdelning:</p>
+                <p>Baspriser: 299 kr</p>
+                <p id="additionalCost" style="color: #0d6efd;"></p>
+            </div>
+
+            <label>Namn</label>
+            <input type="text" id="customName" name="customName" required placeholder="Ange ditt namn">
+
+            <label>E-post</label>
+            <input type="email" id="customEmail" name="customEmail" required placeholder="Din e-postadress">
+
+            <label>Telefon</label>
+            <input type="tel" id="customPhone" name="customPhone" placeholder="Din telefonnummer">
+
+            <label>Önskat Datum</label>
+            <input type="date" id="customDate" name="customDate">
+
+            <label>Meddelande</label>
+            <textarea id="customMessage" name="customMessage" rows="4" placeholder="Lägg till eventuella kommentarer..."></textarea>
+
+            <button type="submit" class="submit-btn">Skicka Anpassad Offert</button>
+        </form>
+        <div id="customSuccessMessage" style="display:none; color:green; margin-top:20px; font-weight:bold; text-align:center;">
+            ✓ Din offert har skickats! Vi kontaktar dig snart med detaljer.
+        </div>
+    </div>
+</section>
+
 <section class="container" id="bokning">
     <div class="booking">
         <h2>Boka Tid</h2>
@@ -144,6 +216,7 @@
                 <option>Bas</option>
                 <option>Standard</option>
                 <option>Premium</option>
+                <option>Anpassad Paket</option>
             </select>
 
             <label>Önskat Datum</label>
