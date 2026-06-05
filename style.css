@@ -126,11 +126,61 @@ h2 {
     border-radius: 15px;
     width: 350px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    animation: slideIn 0.5s ease;
 }
 
 .review p {
     margin: 15px 0;
     font-style: italic;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review-form-section {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.star-rating {
+    margin: 15px 0;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    display: block;
+    padding: 12px 15px;
+    margin: 8px 0;
+    cursor: pointer;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.star-rating label:hover {
+    background: #e9ecef;
+}
+
+.star-rating input[type="radio"]:checked + label {
+    background: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
 }
 
 .booking {
@@ -212,6 +262,10 @@ footer {
     }
 
     .booking {
+        padding: 20px;
+    }
+
+    .review-form-section {
         padding: 20px;
     }
 }
