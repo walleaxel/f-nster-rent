@@ -65,7 +65,7 @@
 <section class="container">
     <h2>Kundrecensioner</h2>
 
-    <div class="reviews">
+    <div class="reviews" id="reviewsContainer">
 
         <div class="review">
             ⭐⭐⭐⭐⭐
@@ -85,6 +85,42 @@
             <strong>- Sara</strong>
         </div>
 
+    </div>
+</section>
+
+<section class="container" id="reviewForm">
+    <div class="review-form-section">
+        <h2>Lägg till din recension</h2>
+        <form id="reviewFormElement">
+            <label>Ditt Namn</label>
+            <input type="text" id="reviewName" name="reviewName" required placeholder="Ange ditt namn">
+
+            <label>Betyg</label>
+            <div class="star-rating">
+                <input type="radio" name="rating" value="5" id="star5" required>
+                <label for="star5">⭐⭐⭐⭐⭐ (5 stjärnor)</label>
+                
+                <input type="radio" name="rating" value="4" id="star4">
+                <label for="star4">⭐⭐⭐⭐ (4 stjärnor)</label>
+                
+                <input type="radio" name="rating" value="3" id="star3">
+                <label for="star3">⭐⭐⭐ (3 stjärnor)</label>
+                
+                <input type="radio" name="rating" value="2" id="star2">
+                <label for="star2">⭐⭐ (2 stjärnor)</label>
+                
+                <input type="radio" name="rating" value="1" id="star1">
+                <label for="star1">⭐ (1 stjärna)</label>
+            </div>
+
+            <label>Din Recension</label>
+            <textarea id="reviewText" name="reviewText" rows="5" required placeholder="Beskriv din erfarenhet med Fönster Rent..."></textarea>
+
+            <button type="submit">Skicka Recension</button>
+        </form>
+        <div id="reviewSuccessMessage" style="display:none; color:green; margin-top:20px; font-weight:bold; text-align:center;">
+            ✓ Tack för din recension! Den kommer att visas snart.
+        </div>
     </div>
 </section>
 
